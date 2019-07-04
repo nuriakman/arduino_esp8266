@@ -53,7 +53,7 @@ void handle_potOKU() {
   // Pot değerini okuyalım...
   POT_Degeri  = analogRead(pot);
   Serial.println(POT_Degeri);
-  
+
   server.send(200, "text/html", SendHTML());
 }
 
@@ -65,14 +65,13 @@ String SendHTML(){
   String ptr = "<!DOCTYPE html>\n";
   ptr +="<html>\n";
   ptr +="<head>\n";
+  ptr +="<meta charset='utf-8'>\n";
   ptr +="<title>POT Okuma</title>\n";
   ptr +="</head>\n";
   ptr +="<body>\n";
   ptr +="<h1>POT Oku</h1>\n";
   ptr +="<p>POT değerini okumak için düğmeye tıklayınız</p>\n";
-  ptr +="<form method=\"get\">\n";
-  ptr +="<input type=\"button\" value=\"POT OKU\" onclick=\"window.location.href='/potOKU'\">\n";
-  ptr +="</form>\n";
+  ptr +="<input type='button' value='POT OKU' onclick=\"window.location.href='/potOKU'\">\n";
   ptr +="<h1>Okunan POT Değeri:</h1>\n";
   ptr +="<div style='color:red;font-size: 160px;'>";
   ptr +=String(POT_Degeri);

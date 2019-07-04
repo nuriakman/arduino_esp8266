@@ -73,6 +73,7 @@ String SendHTML(){
   String ptr = "<!DOCTYPE html>\n";
   ptr +="<html>\n";
   ptr +="<head>\n";
+  ptr +="<meta charset='utf-8'>\n";
   ptr +="<title>LED Kontrol</title>\n";
   ptr +="</head>\n";
   ptr +="<body>\n";
