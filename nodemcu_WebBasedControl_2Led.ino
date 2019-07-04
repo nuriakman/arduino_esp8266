@@ -10,7 +10,7 @@ const char* password = "password";  //Enter Password here
 
 ESP8266WebServer server(80);
 
-uint8_t LED1pin = D2; bool LED1status = LOW;
+uint8_t LED1pin = D1; bool LED1status = LOW;
 uint8_t LED2pin = D2; bool LED2status = LOW;
 
 void setup() {
